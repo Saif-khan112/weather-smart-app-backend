@@ -62,7 +62,7 @@ app.get("/users/:id", async (req: Request, res: Response) => {
 // Update User
 app.put("/users/:id", async (req: Request, res: Response) => {
   try {
-    const { name, zip } = req.body ;
+    const { name, zip } = req.body;
     const userRef = db.ref(`users/${req.params.id}`);
     const snapshot = await userRef.once("value");
 
